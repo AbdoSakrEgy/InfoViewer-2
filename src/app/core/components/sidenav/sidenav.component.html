@@ -1,1 +1,170 @@
-<p>sidenav works!</p>
+<main class="w-56 flex flex-col overflow-hidden">
+  <div class="flex justify-center p-3 mb-10">
+    <img src="../../../../assets/Icons/logo.png" alt="logo" />
+  </div>
+  <div class="flex flex-col gap-3 pt-10 border-t text-right">
+    <section class="pr-3 text-[#CFCFCF] text-[10px]">الرئيسية</section>
+    <!-- menue -->
+    <section class="flex flex-col">
+      <a
+        routerLink="/users-info"
+        ariaCurrentWhenActive="page"
+        class="flex justify-end items-center hover:cursor-pointer"
+      >
+        <span class="flex items-center">
+          <p class="!m-0 text-[10px] font-semibold px-2">الرئيسية</p>
+          <img
+            routerLinkActive="active"
+            src="../../../../assets/Icons/home.png"
+            alt="icon"
+            class="object-contain p-3 rounded-l-full"
+          />
+        </span>
+      </a>
+    </section>
+    <!-- menue -->
+    <section class="flex flex-col">
+      <a
+        routerLink="/first-component"
+        ariaCurrentWhenActive="page"
+        class="flex justify-between items-center hover:cursor-pointer"
+        (click)="isMenu1Open = !isMenu1Open"
+      >
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          *ngIf="true"
+          >{{ isMenu1Open ? "expand_less" : "expand_more" }}</mat-icon
+        >
+
+        <span class="flex items-center">
+          <p class="!m-0 text-[10px] font-semibold px-2">منيو رقم 1</p>
+          <img
+            routerLinkActive="active"
+            src="../../../../assets/Icons/home.png"
+            alt="icon"
+            class="object-contain p-3 rounded-l-full"
+          />
+        </span>
+      </a>
+      <div class="mr-16 text-[10px] font-medium" *ngIf="isMenu1Open">
+        <p>منيو ميني</p>
+        <p>منيو ميني</p>
+        <p>منيو ميني</p>
+      </div>
+    </section>
+    <!-- menue -->
+    <section class="flex flex-col">
+      <a
+        routerLink="/second-component"
+        ariaCurrentWhenActive="page"
+        class="flex justify-between items-center hover:cursor-pointer"
+        (click)="isMenu2Open = !isMenu2Open"
+      >
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          *ngIf="true"
+          >{{ isMenu2Open ? "expand_less" : "expand_more" }}</mat-icon
+        >
+
+        <span class="flex items-center">
+          <p class="!m-0 text-[10px] font-semibold px-2">منيو رقم 1</p>
+          <img
+            routerLinkActive="active"
+            src="../../../../assets/Icons/home.png"
+            alt="icon"
+            class="object-contain p-3 rounded-l-full"
+          />
+        </span>
+      </a>
+      <div class="mr-16 text-[10px] font-medium" *ngIf="isMenu2Open">
+        <p>منيو ميني</p>
+        <p>منيو ميني</p>
+        <p>منيو ميني</p>
+      </div>
+    </section>
+    <!-- menue -->
+    <section class="flex flex-col">
+      <a
+        routerLink="/third-component"
+        ariaCurrentWhenActive="page"
+        class="flex justify-end items-center hover:cursor-pointer"
+      >
+        <span class="flex items-center">
+          <p class="!m-0 text-[10px] font-semibold px-2">منيو رقم 1</p>
+          <img
+            routerLinkActive="active"
+            src="../../../../assets/Icons/home.png"
+            alt="icon"
+            class="object-contain p-3 rounded-l-full"
+          />
+        </span>
+      </a>
+    </section>
+    <!-- menue -->
+    <section class="flex flex-col">
+      <a
+        routerLink="/fourth-component"
+        ariaCurrentWhenActive="page"
+        class="flex justify-end items-center hover:cursor-pointer"
+      >
+        <span class="flex items-center">
+          <p class="!m-0 text-[10px] font-semibold px-2">منيو رقم 1</p>
+          <img
+            routerLinkActive="active"
+            src="../../../../assets/Icons/home.png"
+            alt="icon"
+            class="object-contain p-3 rounded-l-full"
+          />
+        </span>
+      </a>
+    </section>
+    <!-- account -->
+    <section class="pr-3 text-[#CFCFCF] text-[10px]">الحساب</section>
+    <!-- menue -->
+    <section class="flex flex-col">
+      <a
+        routerLink="/help"
+        ariaCurrentWhenActive="page"
+        class="flex justify-end items-center hover:cursor-pointer"
+      >
+        <span class="flex items-center">
+          <p class="!m-0 text-[10px] font-semibold px-2">المساعدة</p>
+          <img
+            routerLinkActive="active"
+            src="../../../../assets/Icons/info-circle.png"
+            alt="icon"
+            class="object-contain p-3 rounded-l-full"
+          />
+        </span>
+      </a>
+    </section>
+    <!-- menue -->
+    <section class="flex flex-col">
+      <a
+        routerLink="/settings"
+        ariaCurrentWhenActive="page"
+        class="flex justify-end items-center hover:cursor-pointer"
+      >
+        <span class="flex items-center">
+          <p class="!m-0 text-[10px] font-semibold px-2">الإعدادات</p>
+          <img
+            routerLinkActive="active"
+            src="../../../../assets/Icons/setting-2.png"
+            alt="icon"
+            class="object-contain p-3 rounded-l-full"
+          />
+        </span>
+      </a>
+    </section>
+  </div>
+</main>
+<button
+  mat-mini-fab
+  aria-label="Example icon button with a home icon"
+  style="background-color: #feee00; color: black; width: 20px; height: 20px"
+>
+  <mat-icon>{{ true ? "chevron_left" : "chevron_right" }}</mat-icon>
+</button>
+<mat-icon>{{ true ? "chevron_left" : "chevron_right" }}</mat-icon>
