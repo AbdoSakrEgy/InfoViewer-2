@@ -1,3 +1,22 @@
 .active {
   @apply bg-[#FEEE00];
 }
+.sidenav-open-mobileScreen-tabletScreen {
+  @apply absolute top-0 bottom-0 left-0 right-0 w-full bg-white;
+}
+/*  */
+.sidenav-open-close {
+  background-color: #feee00;
+  color: black;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+.sidenav-open-close:hover {
+  cursor: pointer;
+}
+/*  */

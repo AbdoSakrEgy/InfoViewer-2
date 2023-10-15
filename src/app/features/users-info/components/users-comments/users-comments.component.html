@@ -1,1 +1,93 @@
-<p>users-comments works!</p>
+<main class="w-[28vw] px-7 py-3 border border-purple-500 bg-white">
+	<!-- section1-datePicker -->
+	<div class="flex justify-between items-center">
+		<section class="datepicker-toggle w-24 h-10 bg-[#F7F6FD] text-[#A09CB2] rounded-lg relative">
+			<span class="datepicker-toggle-button absolute top-1/4 right-1">
+				<img src="../../../../../assets/Icons/calendar-1.png"
+					alt="iconCalender">
+			</span>
+			<span class="absolute top-1/4 left-1">
+				<mat-icon aria-hidden="false"
+					aria-label="Example home icon"
+					fontIcon="expand_more"
+					class="text-[#a09cb2] text-sm">
+				</mat-icon>
+			</span>
+			<span class="absolute top-1/4 left-1/4 text-[9px]">
+				{{
+        modifiedDate
+      }}
+			</span>
+			<input [(ngModel)]="date"
+				(change)="setModifiedDate()"
+				type="date"
+				class="datepicker-input w-full h-full opacity-0 outline-none">
+		</section>
+		<!-- controls -->
+		<section class="flex justify-between items-center">
+			<mat-icon class="cursor-pointer"
+				aria-hidden="false"
+				aria-label="Example home icon"
+				fontIcon="chevron_left"></mat-icon>
+			<mat-icon class="cursor-pointer"
+				aria-hidden="false"
+				aria-label="Example home icon"
+				fontIcon="chevron_right"></mat-icon>
+			<span class="text-xs font-extrabold">تقويم المواعيد</span>
+		</section>
+	</div>
+	<!-- section2-week -->
+	<div class="flex justify-between items-center gap-1 border-y py-2 my-2">
+		<div *ngFor="let day of currentWeekData"
+			[class]="{ selectedDay: day.selectedDay }"
+			class="flex flex-col items-center hover:cursor-pointer">
+			<section [class]="{
+          'text-[#B4B4B4]': !day.selectedDay,
+          'text-black': day.selectedDay
+        }"
+				class="text-[7px]">
+				{{ day.name }}
+			</section>
+			<section [class]="{ selectedDayCircle: day.selectedDay }"
+				class="text-xs">
+				{{ day.number }}
+			</section>
+			<section class="flex justify-center items-center mt-1 gap-1">
+				<span *ngIf="day.extraOptions.first"
+					class="w-1 h-1 bg-[#5961F9] rounded-full"></span>
+				<span *ngIf="day.extraOptions.second"
+					class="w-1 h-1 bg-[#FC9A00] rounded-full"></span>
+				<span *ngIf="day.extraOptions.third"
+					class="w-1 h-1 bg-[#3DD598] rounded-full"></span>
+			</section>
+		</div>
+	</div>
+	<!-- section3-comments -->
+	<div class="flex flex-col gap-3">
+		<section *ngFor="let comment of comments"
+			class="flex flex-col items-end gap-2 w-full rounded-lg p-3 bg-[#7661E2] text-white">
+			<span class="text-[10px] font-extrabold">{{ comment.title }}</span>
+			<span class="flex items-center text-[10px]">
+				<span>{{ comment.date }}</span>
+				<mat-icon aria-hidden="false"
+					fontIcon="schedule"
+					class="scale-75"></mat-icon>
+			</span>
+			<span class="flex justify-between items-center w-full">
+				<span class="flex justify-center items-center w-10 rounded-xl py-1 bg-white">
+					<mat-icon aria-hidden="false"
+						fontIcon="arrow_back"
+						class="scale-75 text-[#7661E2]"></mat-icon>
+				</span>
+				<span class="flex justify-between items-center gap-1 text-[10px]">
+					<span>
+						{{comment.userName}}
+					</span>
+					<img [src]="comment.img"
+						alt="img"
+						class="w-7">
+				</span>
+			</span>
+		</section>
+	</div>
+</main>

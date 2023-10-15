@@ -4,6 +4,7 @@ import { UsersTableComponent } from './components/users-table/users-table.compon
 import { UsersCommentsComponent } from './components/users-comments/users-comments.component';
 import { UsersStatsComponent } from './components/users-stats/users-stats.component';
 import { UsersInfoPageComponent } from './components/users-info-page/users-info-page.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { UsersInfoPageComponent } from './components/users-info-page/users-info-
     UsersCommentsComponent,
     UsersStatsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   exports: [
     UsersInfoPageComponent,
     UsersTableComponent,
