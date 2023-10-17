@@ -1,9 +1,3 @@
-.active {
-  @apply bg-[#FEEE00];
-}
-.sidenav-open-mobileScreen-tabletScreen {
-  @apply absolute top-0 bottom-0 left-0 right-0 w-full bg-white;
-}
 /*  */
 .sidenav-open-close {
   background-color: #feee00;
@@ -20,3 +14,12 @@
   cursor: pointer;
 }
 /*  */
+.active {
+  @apply bg-[#FEEE00];
+}
+.sidenavOpen-sm-md {
+  @apply fixed overflow-scroll top-0 bottom-0 left-0 right-0 w-full bg-white;
+}
+.sidenavOpen-lg {
+  @apply w-56;
+}

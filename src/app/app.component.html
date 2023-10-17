@@ -1,9 +1,13 @@
 <main class="flex w-full font-mainFont">
-  <div class="flex flex-col w-full border border-red-600">
-    <section><app-header></app-header></section>
-    <section><router-outlet></router-outlet></section>
-  </div>
-  <div class="border border-red-600">
-    <app-sidenav></app-sidenav>
-  </div>
+	<div class="flex flex-col w-full overflow-auto border border-red-600">
+		<section>
+			<app-header></app-header>
+		</section>
+		<section>
+			<router-outlet></router-outlet>
+		</section>
+	</div>
+	<div class="border border-red-600">
+		<app-sidenav></app-sidenav>
+	</div>
 </main>

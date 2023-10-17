@@ -1,4 +1,10 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  HostListener,
+} from '@angular/core';
 
 @Component({
   selector: 'app-users-comments',
@@ -6,6 +12,7 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
   styleUrls: ['./users-comments.component.css'],
 })
 export class UsersCommentsComponent implements OnChanges, OnInit {
+  innerWidth: any = screen.width;
   date: string = '';
   modifiedDate: string = 'اختر الموعد';
   currentWeekData = [
@@ -58,45 +65,56 @@ export class UsersCommentsComponent implements OnChanges, OnInit {
       date: '06:00 - 05:00 م',
       img: '../../../../../assets/shapes/Image-79.png',
       userName: 'محمود أحمد',
+      bgColor: '#F2F5F1',
     },
     {
       title: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوي',
       date: '06:00 - 05:00 م',
       img: '../../../../../assets/shapes/Image-79.png',
       userName: 'محمود أحمد',
+      bgColor: '#F1ECFE',
     },
     {
       title: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوي',
       date: '06:00 - 05:00 م',
       img: '../../../../../assets/shapes/Image-79.png',
       userName: 'محمود أحمد',
+      bgColor: '#FFF6E3',
     },
     {
       title: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوي',
       date: '06:00 - 05:00 م',
       img: '../../../../../assets/shapes/Image-79.png',
       userName: 'محمود أحمد',
+      bgColor: '#F2F5F1',
     },
     {
       title: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوي',
       date: '06:00 - 05:00 م',
       img: '../../../../../assets/shapes/Image-79.png',
       userName: 'محمود أحمد',
+      bgColor: '#F1ECFE',
     },
     {
       title: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوي',
       date: '06:00 - 05:00 م',
       img: '../../../../../assets/shapes/Image-79.png',
       userName: 'محمود أحمد',
+      bgColor: '#FFF6E3',
     },
     {
       title: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوي',
       date: '06:00 - 05:00 م',
       img: '../../../../../assets/shapes/Image-79.png',
       userName: 'محمود أحمد',
+      bgColor: '#FFF6E3',
     },
   ];
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.innerWidth = window.innerWidth;
+  }
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
     console.log(this.modifiedDate);

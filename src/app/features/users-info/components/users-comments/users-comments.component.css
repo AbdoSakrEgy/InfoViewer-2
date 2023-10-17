@@ -1,16 +1,4 @@
-.selectedDay {
-  @apply bg-[#FEEE00] p-2 rounded-lg text-white;
-}
-.selectedDayCircle {
-  @apply flex justify-center items-center p-1 bg-black rounded-full w-5 h-5;
-}
 /* css */
-.datepicker-toggle {
-}
-.datepicker-toggle-button {
-}
-.datepicker-input {
-}
 .datepicker-input::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 0;
@@ -22,3 +10,17 @@
   cursor: pointer;
   opacity: 0;
 }
+/* tailwindcss */
+.selectedDay {
+  @apply bg-[#FEEE00] p-2 rounded-lg text-white;
+}
+.selectedDayCircle {
+  @apply flex justify-center items-center p-1 bg-black rounded-full w-5 h-5;
+}
+.userComments-sm-md {
+  @apply w-full;
+}
+.userComments-lg {
+  @apply w-[28vw];
+}
+

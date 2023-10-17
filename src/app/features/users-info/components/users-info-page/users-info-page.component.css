@@ -1,0 +1,6 @@
+.usersInfo-sm-md {
+  @apply flex flex-col-reverse;
+}
+.usersInfo-lg {
+  @apply flex justify-between;
+}
