@@ -1,1 +1,196 @@
-<p>users-stats works!</p>
+<main class="flex justify-between items-center gap-2 p-3 bg-[#F6F6F6]">
+  <!-- stats1 -->
+  <div class="stats1"></div>
+  <!-- stats2 -->
+  <div class="stats2">
+    <!-- stats2-section1 -->
+    <div class="stats2-section1">إحصائيات</div>
+    <!-- stats2-section2 -->
+    <div class="stats2-section2">
+      <round-progress
+        [current]="50"
+        [max]="100"
+        [color]="'#0771DE'"
+        [background]="'#E5E5EF'"
+        [radius]="65"
+        [stroke]="10"
+        [rounded]="true"
+        [responsive]="false"
+        [duration]="800"
+        [animation]="'easeInOutQuart'"
+        [animationDelay]="0"
+      ></round-progress>
+      <span
+        class="absolute top-0 w-full h-full flex justify-center items-center rotate-90"
+      >
+        <round-progress
+          [current]="30"
+          [max]="100"
+          [color]="'#FDB841'"
+          [background]="'#E5E5EF'"
+          [radius]="45"
+          [stroke]="10"
+          [rounded]="true"
+          [responsive]="false"
+          [duration]="800"
+          [animation]="'easeInOutQuart'"
+          [animationDelay]="0"
+        ></round-progress>
+      </span>
+      <span
+        class="absolute top-0 w-full h-full flex flex-col justify-center items-center"
+      >
+        <span class="text-base font-bold">158</span>
+        <span class="text-[10px] font-medium text-[#6B7181]">جهاز</span>
+      </span>
+    </div>
+    <!-- stats2-section3 -->
+    <div class="stats2-section3"></div>
+  </div>
+  <!-- stats3 -->
+  <div class="stats3">
+    <!-- stats3-section1 -->
+    <div class="stats3-section1">
+      <section
+        class="flex relative h-full text-[#787486] hover:cursor-pointer"
+        (click)="picker.open()"
+      >
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="expand_more"
+          class="absolute top-0 -left-3 text-xs hover:cursor-pointer"
+        ></mat-icon>
+        <span
+          class="absolute flex gap-1 w-full h-full top-0 bottom-0 left-0 right-0 text-[10px] hover:cursor-pointer"
+        >
+          <span class="hover:cursor-pointer">{{ nameOfEndMonth }}</span>
+          <span class="hover:cursor-pointer">{{ endDay }}</span>
+          <span class="hover:cursor-pointer">-</span>
+          <span class="hover:cursor-pointer">{{ nameOfStartMonth }}</span>
+          <span class="hover:cursor-pointer">{{ startDay }}</span>
+        </span>
+        <mat-date-range-input
+          [formGroup]="range"
+          [rangePicker]="picker"
+          class="opacity-0 hover:cursor-pointer"
+        >
+          <input
+            matStartDate
+            formControlName="start"
+            placeholder="تاريخ البدء"
+            class="hover:cursor-pointer"
+          />
+          <input
+            matEndDate
+            formControlName="end"
+            placeholder="تاريخ الإنتهاء"
+            class="hover:cursor-pointer"
+          />
+        </mat-date-range-input>
+        <mat-date-range-picker
+          #picker
+          (closed)="updateDateRange()"
+          class="hover:cursor-pointer"
+        ></mat-date-range-picker>
+      </section>
+      <section class="text-xs font-extrabold w-full text-right">
+        الشخص الاول
+      </section>
+    </div>
+    <!-- stats3-section2 -->
+    <div class="stats3-section2">
+      <section
+        class="relative flex justify-center items-center w-[161px] h-[161px] overflow-hidden"
+      >
+        <span
+          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+        >
+          <round-progress
+            [current]="90"
+            [max]="100"
+            [color]="'#3DD598'"
+            [background]="'white'"
+            [radius]="80"
+            [stroke]="3"
+            [rounded]="true"
+            [clockwise]="false"
+            [responsive]="false"
+            [duration]="800"
+            [animation]="'easeInOutQuart'"
+            [animationDelay]="0"
+          ></round-progress>
+        </span>
+        <span
+          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+        >
+          <round-progress
+            [current]="60"
+            [max]="100"
+            [color]="'#7661E2'"
+            [background]="'white'"
+            [radius]="65"
+            [stroke]="3"
+            [rounded]="true"
+            [clockwise]="true"
+            [responsive]="false"
+            [duration]="800"
+            [animation]="'easeInOutQuart'"
+            [animationDelay]="0"
+          ></round-progress>
+        </span>
+        <span
+          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+        >
+          <round-progress
+            [current]="30"
+            [max]="100"
+            [color]="'#F8C07F'"
+            [background]="'white'"
+            [radius]="50"
+            [stroke]="3"
+            [rounded]="true"
+            [clockwise]="false"
+            [responsive]="false"
+            [duration]="800"
+            [animation]="'easeInOutQuart'"
+            [animationDelay]="0"
+          ></round-progress>
+        </span>
+        <span
+          class="flex flex-col items-center justify-center absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+        >
+          <img
+            src="../../../../../assets/shapes/Image-79.png"
+            alt="employee image"
+            class="w-10 mt-5"
+          />
+          <p class="text-[10px] p-0">الموظف الأول</p>
+        </span>
+      </section>
+      <section class="flex flex-col gap-7 text-right">
+        <section>
+          <span class="flex justify-end items-center gap-1">
+            <span class="text-[10px] text-[#787486]">قراءة رقم 1</span>
+            <div class="w-[7px] h-[7px] rounded-full bg-[#3DD598]"></div>
+          </span>
+          <span class="text-sm font-extrabold text-right">254</span>
+        </section>
+        <section>
+          <span class="flex justify-end items-center gap-1">
+            <span class="text-[10px] text-[#787486]">قراءة رقم 2</span>
+            <div class="w-[7px] h-[7px] rounded-full bg-[#7661E2]"></div>
+          </span>
+          <span class="text-sm font-extrabold text-right">120</span>
+        </section>
+        <section>
+          <span class="flex justify-end items-center gap-1">
+            <span class="text-[10px] text-[#787486]">قراءة رقم 3</span>
+            <div class="w-[7px] h-[7px] rounded-full bg-[#F8C07F]"></div>
+          </span>
+          <span class="text-sm font-extrabold text-right">25</span>
+        </section>
+      </section>
+    </div>
+  </div>
+</main>

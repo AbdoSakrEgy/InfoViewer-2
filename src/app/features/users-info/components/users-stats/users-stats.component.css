@@ -1,0 +1,32 @@
+.stats1 {
+  @apply border border-purple-500 rounded-md w-[195px] h-[254.63px];
+}
+
+.stats2 {
+  @apply border border-[#E7E7E7] rounded-md bg-white w-[279px] h-[254.63px] px-4 py-5 flex flex-col gap-3;
+}
+.stats2-section1 {
+  @apply text-right text-xs font-extrabold;
+}
+.stats2-section2 {
+  @apply relative flex justify-center items-center;
+}
+.stats2-section3 {
+  /* @apply; */
+}
+
+.stats3 {
+  @apply border border-[#E7E7E7] rounded-md bg-white w-[279px] h-[254.63px] px-4 py-5 flex flex-col gap-7;
+}
+.stats3-section1 {
+  @apply flex justify-between items-center;
+}
+.stats3-section2 {
+  @apply flex justify-between items-center;
+}
+
+/* css */
+mat-form-field div {
+  padding: 0px;
+}
+/*  */

@@ -119,9 +119,7 @@ export class UsersCommentsComponent implements OnChanges, OnInit {
     console.log(changes);
     console.log(this.modifiedDate);
   }
-  ngOnInit(): void {
-    console.log(this.modifiedDate);
-  }
+  ngOnInit(): void {}
   setModifiedDate() {
     if (this.date) {
       this.modifiedDate = getYear(this.date) + getMonthName(this.date);
