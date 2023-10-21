@@ -1,6 +1,20 @@
-<main class="flex justify-between items-center gap-2 p-3 bg-[#F6F6F6]">
+<main
+  class="gap-2 p-3 bg-[#F6F6F6]"
+  [class]="{
+    'usersStats-sm': innerWidth <= 480,
+    'usersStats-md': innerWidth > 480 && innerWidth <= 768,
+    'usersStats-lg': innerWidth > 768
+  }"
+>
   <!-- stats1 -->
-  <div class="stats1">
+  <div
+    class="stats1"
+    [class]="{
+      'usersStats-stats1-sm': innerWidth <= 480,
+      'usersStats-stats1-md': innerWidth > 480 && innerWidth <= 768,
+      'usersStats-stats1-lg': innerWidth > 768
+    }"
+  >
     <div class="stats1-section1">
       <div class="flex flex-col justify-around pr-3 w-[40%] h-full">
         <span class="w-full text-[10px] text-right">قراءات تانية</span>
@@ -42,7 +56,12 @@
     </div>
   </div>
   <!-- stats2 -->
-  <div class="stats2">
+  <div
+    class="stats2"
+    [class]="{
+      'usersStats-stats2-sm': innerWidth <= 480
+    }"
+  >
     <!-- stats2-section1 -->
     <div class="stats2-section1">إحصائيات</div>
     <!-- stats2-section2 -->
@@ -105,7 +124,12 @@
     </div>
   </div>
   <!-- stats3 -->
-  <div class="stats3">
+  <div
+    class="stats3"
+    [class]="{
+      'usersStats-stats3-sm': innerWidth <= 480
+    }"
+  >
     <!-- stats3-section1 -->
     <div class="stats3-section1">
       <section

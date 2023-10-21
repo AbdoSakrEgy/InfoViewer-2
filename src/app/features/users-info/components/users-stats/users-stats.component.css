@@ -1,5 +1,6 @@
+/* ================= tailwindcss ================= */
 .stats1 {
-  @apply flex flex-col justify-between w-[195px] h-[254.63px];
+  @apply h-[254.63px];
 }
 .stats1-section1,
 .stats1-section2,
@@ -38,8 +39,36 @@
 .stats3-section2 {
   @apply flex justify-between items-center;
 }
+/* ================= Responsive ================= */
+.usersStats-sm {
+  @apply flex flex-col justify-between items-center;
+}
+.usersStats-md {
+  @apply flex justify-between items-center flex-wrap;
+}
+.usersStats-lg {
+  @apply flex justify-between items-center;
+}
 
-/* css */
+.usersStats-stats1-sm {
+  @apply flex flex-col justify-between w-full;
+}
+.usersStats-stats1-md {
+  @apply flex flex-col justify-between w-full;
+}
+.usersStats-stats1-lg {
+  @apply flex flex-col justify-between w-[195px];
+}
+
+.usersStats-stats2-sm {
+  @apply w-full;
+}
+
+.usersStats-stats3-sm {
+  @apply w-full;
+}
+
+/* ================= css ================= */
 mat-form-field div {
   padding: 0px;
 }

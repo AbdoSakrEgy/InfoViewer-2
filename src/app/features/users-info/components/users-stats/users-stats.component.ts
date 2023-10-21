@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-users-stats',
@@ -7,6 +8,11 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./users-stats.component.css'],
 })
 export class UsersStatsComponent {
+  innerWidth: any = screen.width;
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.innerWidth = window.innerWidth;
+  }
   range = new FormGroup({
     start: new FormControl<Date | null>(
       new Date(
