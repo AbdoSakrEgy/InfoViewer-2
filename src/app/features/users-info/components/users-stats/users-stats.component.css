@@ -1,5 +1,19 @@
 .stats1 {
-  @apply border border-purple-500 rounded-md w-[195px] h-[254.63px];
+  @apply flex flex-col justify-between w-[195px] h-[254.63px];
+}
+.stats1-section1,
+.stats1-section2,
+.stats1-section3 {
+  @apply flex justify-end items-center text-white rounded-xl h-[75PX] bg-no-repeat;
+}
+.stats1-section1 {
+  @apply bg-[url('../../../../../assets/shapes/Mask-Group1.png')] bg-[#FF9A3E];
+}
+.stats1-section2 {
+  @apply bg-[url('../../../../../assets/shapes/Mask-Group2.png')] bg-[#7661E2];
+}
+.stats1-section3 {
+  @apply bg-[url('../../../../../assets/shapes/Mask-Group3.png')] bg-[#3DD598];
 }
 
 .stats2 {
@@ -12,7 +26,7 @@
   @apply relative flex justify-center items-center;
 }
 .stats2-section3 {
-  /* @apply; */
+  @apply flex justify-around items-center;
 }
 
 .stats3 {
@@ -29,4 +43,3 @@
 mat-form-field div {
   padding: 0px;
 }
-/*  */

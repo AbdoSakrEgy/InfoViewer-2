@@ -1,6 +1,46 @@
 <main class="flex justify-between items-center gap-2 p-3 bg-[#F6F6F6]">
   <!-- stats1 -->
-  <div class="stats1"></div>
+  <div class="stats1">
+    <div class="stats1-section1">
+      <div class="flex flex-col justify-around pr-3 w-[40%] h-full">
+        <span class="w-full text-[10px] text-right">قراءات تانية</span>
+        <span class="flex justify-end items-center gap-1">
+          <img
+            src="../../../../../assets/Icons/timer-start.png"
+            alt=""
+            class="object-contain"
+          />
+          <span class="font-bold text-xl">35</span>
+        </span>
+      </div>
+    </div>
+    <div class="stats1-section2">
+      <div class="flex flex-col justify-around pr-3 w-[40%] h-full">
+        <span class="w-full text-[10px] text-right">قراءات تانية</span>
+        <span class="flex justify-end items-center gap-1">
+          <img
+            src="../../../../../assets/Icons/timer-start.png"
+            alt=""
+            class="object-contain"
+          />
+          <span class="font-bold text-xl">35</span>
+        </span>
+      </div>
+    </div>
+    <div class="stats1-section3">
+      <div class="flex flex-col justify-around pr-3 w-[40%] h-full">
+        <span class="w-full text-[10px] text-right">قراءات تانية</span>
+        <span class="flex justify-end items-center gap-1">
+          <img
+            src="../../../../../assets/Icons/timer-start.png"
+            alt=""
+            class="object-contain"
+          />
+          <span class="font-bold text-xl">35</span>
+        </span>
+      </div>
+    </div>
+  </div>
   <!-- stats2 -->
   <div class="stats2">
     <!-- stats2-section1 -->
@@ -45,7 +85,24 @@
       </span>
     </div>
     <!-- stats2-section3 -->
-    <div class="stats2-section3"></div>
+    <div class="stats2-section3">
+      <div class="flex justify-end items-center gap-3">
+        <span class="flex flex-col items-end">
+          <span class="text-base font-bold">108</span>
+          <span class="text-xs font-medium text-[#B6BACA]">
+            الخيار الثاني
+          </span>
+        </span>
+        <span class="h-9 w-1 rounded-t-full rounded-b-full bg-[#FDB841]"></span>
+      </div>
+      <div class="flex justify-end items-center gap-3">
+        <span class="flex flex-col items-end">
+          <span class="text-base font-bold">108</span>
+          <span class="text-xs font-medium text-[#B6BACA]"> الخيار الأول </span>
+        </span>
+        <span class="h-9 w-1 rounded-t-full rounded-b-full bg-[#0771DE]"></span>
+      </div>
+    </div>
   </div>
   <!-- stats3 -->
   <div class="stats3">
@@ -104,17 +161,16 @@
         class="relative flex justify-center items-center w-[161px] h-[161px] overflow-hidden"
       >
         <span
-          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full rotate-45"
         >
           <round-progress
-            [current]="90"
+            [current]="80"
             [max]="100"
             [color]="'#3DD598'"
             [background]="'white'"
             [radius]="80"
             [stroke]="3"
             [rounded]="true"
-            [clockwise]="false"
             [responsive]="false"
             [duration]="800"
             [animation]="'easeInOutQuart'"
@@ -122,7 +178,7 @@
           ></round-progress>
         </span>
         <span
-          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full rotate-180"
         >
           <round-progress
             [current]="60"
@@ -132,7 +188,6 @@
             [radius]="65"
             [stroke]="3"
             [rounded]="true"
-            [clockwise]="true"
             [responsive]="false"
             [duration]="800"
             [animation]="'easeInOutQuart'"
@@ -140,7 +195,7 @@
           ></round-progress>
         </span>
         <span
-          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+          class="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 w-full h-full -rotate-45"
         >
           <round-progress
             [current]="30"
@@ -150,7 +205,6 @@
             [radius]="50"
             [stroke]="3"
             [rounded]="true"
-            [clockwise]="false"
             [responsive]="false"
             [duration]="800"
             [animation]="'easeInOutQuart'"
