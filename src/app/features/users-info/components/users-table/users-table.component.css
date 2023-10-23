@@ -1,0 +1,31 @@
+/* tailwindcss */
+.btn-addNew {
+  @apply bg-[#FEEE00] text-xs font-bold w-[108px] h-[36px] rounded-md;
+}
+.btn-sorting,
+.btn-settings {
+  @apply w-9 h-9 rounded-md bg-white border border-gray-400 flex justify-center items-center;
+}
+.btn-search {
+  @apply w-[277px] h-9 rounded-md bg-white border border-gray-400;
+}
+.input-btn-serach {
+  @apply absolute w-full h-full top-0 left-0 outline-none border-gray-400 rounded-md text-right pr-8 placeholder:text-gray-400 placeholder:text-opacity-40 placeholder:text-[10px];
+}
+
+.mat-column-id {
+  @apply text-right;
+}
+.mat-column-fullName {
+  @apply text-right;
+}
+.mat-column-email {
+  @apply text-right;
+}
+.mat-column-workDays {
+  @apply text-right;
+}
+.mat-column-fileName {
+  @apply text-right;
+}
+/* css */

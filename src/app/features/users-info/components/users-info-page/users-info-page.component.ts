@@ -7,7 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class UsersInfoPageComponent {
   innerWidth: any = screen.width;
-  
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.innerWidth = window.innerWidth;

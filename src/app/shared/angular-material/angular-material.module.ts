@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -19,6 +20,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatFormFieldModule,
     MatNativeDateModule,
     MatProgressSpinnerModule,
+    MatTableModule,
   ],
   exports: [
     MatIconModule,
@@ -28,6 +30,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatFormFieldModule,
     MatNativeDateModule,
     MatProgressSpinnerModule,
+    MatTableModule,
   ],
 })
 export class AngularMaterialModule {}
