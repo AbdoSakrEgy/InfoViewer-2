@@ -28,4 +28,28 @@
 .mat-column-fileName {
   @apply text-right;
 }
-/* css */
+
+/* 
+.mat-mdc-table tbody,
+.mat-mdc-table tfoot,
+.mat-mdc-table thead,
+.mat-mdc-cell,
+.mat-mdc-footer-cell,
+.mat-mdc-header-row,
+.mat-mdc-row,
+.mat-mdc-footer-row,
+.mat-mdc-table .mat-mdc-header-cell 
+ */
+.mat-mdc-table .mat-mdc-header-cell {
+  @apply p-0;
+}
+
+.dayActive {
+  @apply bg-[#2385EA] text-white;
+}
+.dayInactive {
+  @apply bg-[#F7F7FA] text-[#BBBEC2];
+}
+
+
+

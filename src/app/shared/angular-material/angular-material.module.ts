@@ -8,6 +8,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [],
@@ -21,6 +24,9 @@ import { MatTableModule } from '@angular/material/table';
     MatNativeDateModule,
     MatProgressSpinnerModule,
     MatTableModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatCheckboxModule,
   ],
   exports: [
     MatIconModule,
@@ -31,6 +37,9 @@ import { MatTableModule } from '@angular/material/table';
     MatNativeDateModule,
     MatProgressSpinnerModule,
     MatTableModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatCheckboxModule,
   ],
 })
 export class AngularMaterialModule {}

@@ -18,7 +18,7 @@ export class UsersTableComponent {
   dataSource = [
     {
       id: 'ID-1',
-      fullName: 'عبدالرحيم',
+      fullName: 'عبدالرحيم السيد عبدالرحيم صقر',
       email: 'abdo@email.com',
       workDays: [true, true, false, true, true, true, false],
       fileName: 'png.واجهة المستخدم',
