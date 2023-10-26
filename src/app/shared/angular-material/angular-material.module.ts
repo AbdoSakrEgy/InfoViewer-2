@@ -11,6 +11,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -27,6 +28,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatTooltipModule,
     MatMenuModule,
     MatCheckboxModule,
+    MatPaginatorModule,
   ],
   exports: [
     MatIconModule,
@@ -40,6 +42,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatTooltipModule,
     MatMenuModule,
     MatCheckboxModule,
+    MatPaginatorModule,
   ],
 })
 export class AngularMaterialModule {}
