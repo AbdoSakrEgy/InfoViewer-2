@@ -26,6 +26,9 @@
 .mat-mdc-table .mat-mdc-header-cell {
   @apply p-0;
 }
+.mat-mdc-table {
+  margin: 0 !important;
+}
 /* table workDays style */
 .dayActive {
   @apply bg-[#2385EA] text-white;
