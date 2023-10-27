@@ -1,14 +1,52 @@
 <main class="flex flex-col p-3">
-  <div class="flex justify-between items-center">
-    <button class="btn-addNew">إضافة جديد +</button>
-    <div class="flex justify-between gap-2">
-      <span class="btn-sorting">
+  <div
+    [class]="{
+      'table-actions-container-lg': innerWidth >= 768,
+      'table-actions-container-md': innerWidth < 768 && innerWidth > 480,
+      'table-actions-container-sm': innerWidth <= 480
+    }"
+  >
+    <button
+      [class]="{
+        'table-btn-addNew-lg': innerWidth >= 768,
+        'table-btn-addNew-md': innerWidth < 768 && innerWidth > 480,
+        'table-btn-addNew-sm': innerWidth <= 480
+      }"
+    >
+      إضافة جديد +
+    </button>
+    <div
+      [class]="{
+        'table-actions-lg': innerWidth >= 768,
+        'table-actions-md': innerWidth < 768 && innerWidth > 480,
+        'table-actions-sm': innerWidth <= 480
+      }"
+    >
+      <span
+        [class]="{
+          'table-btn-sorting-lg': innerWidth >= 768,
+          'table-btn-sorting-md': innerWidth < 768 && innerWidth > 480,
+          'table-btn-sorting-sm': innerWidth <= 480
+        }"
+      >
         <img src="../../../../../assets/Icons/arrow-3.png" alt="" />
       </span>
-      <span class="btn-settings">
+      <span
+        [class]="{
+          'table-btn-settings-lg': innerWidth >= 768,
+          'table-btn-settings-md': innerWidth < 768 && innerWidth > 480,
+          'table-btn-settings-sm': innerWidth <= 480
+        }"
+      >
         <img src="../../../../../assets/Icons/setting-4.png" alt="" />
       </span>
-      <span class="relative btn-search">
+      <span
+        [class]="{
+          'table-btn-search-lg': innerWidth >= 768,
+          'table-btn-search-md': innerWidth < 768 && innerWidth > 480,
+          'table-btn-search-sm': innerWidth <= 480
+        }"
+      >
         <input type="text" class="input-btn-serach" placeholder="... بحث عن" />
         <img
           src="../../../../../assets/Icons/search-normal.png"
@@ -18,7 +56,7 @@
       </span>
     </div>
   </div>
-  <div class="overflow-auto">
+  <div class="overflow-auto bg-white">
     <table
       mat-table
       [dataSource]="dataSourceForPagination"
@@ -321,18 +359,10 @@
     <!-- angular material paginator -->
     <mat-paginator
       #paginator
-      class=""
       [pageSizeOptions]="[1, 3, 5]"
       pageSize="3"
       aria-label="Select page of periodic elements"
     >
     </mat-paginator>
-    <!-- custom paginator -->
-    <div class="flex justify-between items-center bg-[#F6F6F6]">
-      <div class=""></div>
-      <div class="flex justify-between items-center">
-        
-      </div>
-    </div>
   </div>
 </main>

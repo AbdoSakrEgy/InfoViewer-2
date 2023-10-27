@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-users-table',
@@ -8,11 +9,16 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./users-table.component.css'],
 })
 export class UsersTableComponent implements AfterViewInit {
+  innerWidth: any = screen.width;
   displayedColumns = displayedColumnsData;
   dataSource = dataSourceData;
   dataSourceForPagination = new MatTableDataSource<any>(this.dataSource);
   @ViewChild(MatPaginator) paginator: any;
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.innerWidth = window.innerWidth;
+  }
   ngAfterViewInit() {
     this.dataSourceForPagination.paginator = this.paginator;
   }
