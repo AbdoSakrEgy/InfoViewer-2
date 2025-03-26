@@ -1,4 +1,4 @@
-# user-info
+# InfoViewer-2
 
 Angular Responsive Web Page for Viewing and Managing Personal Data, Contact Details, and Comments
 
