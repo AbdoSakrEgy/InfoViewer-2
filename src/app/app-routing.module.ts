@@ -4,8 +4,8 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 import { UsersInfoPageComponent } from './features/users-info/components/users-info-page/users-info-page.component';
 
 const routes: Routes = [
-  { path: 'users-info', component: UsersInfoPageComponent },
-  { path: '', redirectTo: 'users-info', pathMatch: 'full' },
+  { path: 'InfoViewer-2', component: UsersInfoPageComponent },
+  { path: '', redirectTo: 'InfoViewer-2', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
