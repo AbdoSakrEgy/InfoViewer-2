@@ -20,7 +20,7 @@ The "user-info" project is a responsive single web page built with Angular. It a
 
 ## Demo
 
-Check out the live demo of the "user-info" project: [Live Demo](https://abdosakregy.github.io/user-info/users-info)
+Check out the live demo of the "user-info" project: [Live Demo](https://infoviewer-2.netlify.app/InfoViewer-2)
 
 ## Getting Started
 
